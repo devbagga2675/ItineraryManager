@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/edit_trip"
+        android:title="Edit Trip" />
+    <item
+        android:id="@+id/delete_trip"
+        android:title="Delete Trip" />
+    <item
+        android:id="@+id/share_trip"
+        android:title="Share Trip" />
+    <item android:id="@+id/trip_documents"
+        android:title="Documents"/>
+</menu>

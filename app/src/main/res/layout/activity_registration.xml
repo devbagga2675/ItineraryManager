@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    tools:context=".RegistrationActivity"
+    android:gravity="center_horizontal">
+
+    <!-- Back Arrow and Title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="24dp"-->
+        <!--            android:layout_height="24dp"-->
+        <!--            android:src="@drawable/ic_back_arrow" /> &lt;!&ndash; Replace with your back arrow icon &ndash;&gt;-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            android:textColor="#006D77"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <EditText
+            android:id="@+id/nameinput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/list_item_background"
+            android:hint="Name"
+            android:inputType="text"
+            android:outlineAmbientShadowColor="#3C3F41"
+            android:textColorHint="#BBBBBB"
+            android:padding="10dp"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/emailinput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/list_item_background"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:outlineAmbientShadowColor="#3C3F41"
+            android:textColorHint="#BBBBBB"
+            android:padding="10dp"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/phonenumberinput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/list_item_background"
+            android:hint="Contact Number"
+            android:inputType="phone"
+            android:outlineAmbientShadowColor="#3C3F41"
+            android:textColorHint="#BBBBBB"
+            android:padding="10dp"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/passwordinput"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/list_item_background"
+            android:hint="Password"
+            android:textColorHint="#BBBBBB"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:textColor="#333333"
+            android:inputType="textPassword"
+            />
+
+
+        <!-- Bottom Buttons -->
+        <Button
+            android:id="@+id/signupbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#E29578"
+            android:textColor="@android:color/white"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/loginlink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Log in"
+            android:textAlignment="center"
+            android:textColor="@color/button_blue"/>
+    </LinearLayout>
+
+</LinearLayout>

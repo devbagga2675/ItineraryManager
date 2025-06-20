@@ -1,70 +1,39 @@
-<!-- trip_card.xml -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:background="@drawable/trip_card_background"
     android:padding="16dp"
-    android:layout_margin="8dp"
-    android:elevation="2dp"
-    android:layout_gravity="center">
+    android:layout_marginVertical="5dp"
+    android:elevation="2dp">
 
-    <!-- Trip Name and Status -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="start|end">
-
-        <TextView
-            android:id="@+id/tripNameTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Trip Name"
-            android:layout_gravity="center_vertical"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#D08058" />
-
-        <TextView
-            android:id="@+id/tripStatusTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10sp"
-            android:background="@drawable/status_background_planned"
-            android:padding="4dp"
-            android:text="Planned"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp" />
-    </LinearLayout>
-
-    <!-- Trip Date Range -->
+    <!-- Trip Name -->
     <TextView
-        android:id="@+id/tripDateTextView"
+        android:id="@+id/tripNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="26/07/2025 to 30/07/2025"
-        android:textColor="#7D7D7D"
-        android:layout_marginTop="8dp" />
+        android:text="Trip Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#D08058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="8dp"/>
 
-    <!-- Trip Location -->
+    <!-- Trip Status -->
     <TextView
-        android:id="@+id/tripLocationTextView"
+        android:id="@+id/tripStatusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Daman, India"
-        android:textColor="#7D7D7D"
-        android:layout_marginTop="4dp" />
+        android:text="Planned"
+        android:textColor="#76a154"
+        android:textSize="14sp"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp"/>
 
-    <!-- View Button -->
-    <Button
-        android:id="@+id/viewTripButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="#D08058"
-        android:text="View"
-        android:textColor="#FFFFFF"
-        app:cornerRadius="15px" />
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

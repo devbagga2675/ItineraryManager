@@ -1,213 +1,188 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#FFFFFF"
-    android:padding="16dp"
-    android:fitsSystemWindows="true">
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add an Activity"
-        android:textColor="#006D77"
-        android:textSize="24sp"
-        android:textAlignment="center"
-        android:layout_margin="16dp"
-        android:textStyle="normal" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="16dp"
-        android:orientation="vertical">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:padding="12dp"
-            android:hint="Activity Name"
-            android:textColor="#333333"
-            android:textColorHint="#A9A9A9"
-            android:textSize="14sp"
-            android:minHeight="48dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="13dp">
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="12dp"
-                android:hint="Start Time"
-                android:textColor="#333333"
-                android:textColorHint="#A9A9A9"
-                android:textSize="14sp"
-                android:minHeight="48dp"
-                android:inputType="time"/>
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="12dp"
-                android:layout_marginStart="8dp"
-                android:hint="End Time"
-                android:textColor="#333333"
-                android:textColorHint="#A9A9A9"
-                android:textSize="14sp"
-                android:minHeight="48dp"
-                android:inputType="time"/>
-
-        </LinearLayout>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:padding="12dp"
-            android:hint="Location"
-            android:textColor="#333333"
-            android:textColorHint="#A9A9A9"
-            android:textSize="14sp"
-            android:minHeight="48dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:padding="12dp"
-            android:hint="Add members by their emails"
-            android:textColor="#333333"
-            android:textColorHint="#A9A9A9"
-            android:textSize="14sp"
-            android:minHeight="48dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/list_item_background"
-            android:padding="8dp"
-            android:layout_marginBottom="8dp">
-
-            <TextView
-                android:id="@+id/emailmember1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:paddingEnd="5dp"
-                android:text="ishitaamin3094@gmail.com"
-                android:textColor="#D08058"
-                android:textSize="14sp" />
-
-            <Button
-                android:id="@+id/member1"
-                android:layout_width="wrap_content"
-                android:layout_height="33dp"
-                android:layout_gravity="center_vertical"
-                android:backgroundTint="@android:color/transparent"
-                android:text="Remove"
-                android:textColor="#717171"
-                android:textSize="12sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/list_item_background"
-            android:padding="8dp"
-            android:layout_marginBottom="8dp">
-
-            <TextView
-                android:id="@+id/emailmember2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:paddingEnd="5dp"
-                android:text="devbagga260705@gmail.com"
-                android:textColor="#D08058"
-                android:textSize="14sp" />
-
-            <Button
-                android:id="@+id/member2"
-                android:layout_width="wrap_content"
-                android:layout_height="33dp"
-                android:layout_gravity="center_vertical"
-                android:backgroundTint="@android:color/transparent"
-                android:text="Remove"
-                android:textColor="#717171"
-                android:textSize="12sp" />
-
-        </LinearLayout>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:padding="12dp"
-            android:hint="Description"
-            android:textColor="#333333"
-            android:textColorHint="#A9A9A9"
-            android:textSize="14sp"
-            android:minHeight="48dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:padding="12dp"
-            android:hint="Estimated Expense"
-            android:textColor="#333333"
-            android:textColorHint="#A9A9A9"
-            android:textSize="14sp"
-            android:minHeight="48dp" />
-    </LinearLayout>
-
+    <!-- Back Arrow and Title -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="bottom">
-
-        <Button
-            android:id="@+id/saveActivity"
-            android:layout_width="0dp"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Save"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:backgroundTint="#006d77"
-            android:height="50dp"
-            android:layout_margin="16dp"
-            app:cornerRadius="8dp" />
+            android:text="Add Activity"
+            android:textColor="#006D77"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
 
+    <!-- Activity Name Input (Mandatory) -->
+    <EditText
+        android:id="@+id/activityNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Activity Name"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:textColor="#333333"
+        android:textColorHint="#A9A9A9"
+        android:textSize="14sp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Activity Name"
+        android:layout_marginTop="16dp" />
+
+    <!-- Day Number Spinner (Mandatory) -->
+    <Spinner
+        android:id="@+id/dayNumberSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Day Number for Activity" />
+
+    <!-- Start Time Input (Optional) -->
+    <EditText
+        android:id="@+id/activityStartTimeInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Start Time (Optional)"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:textColor="#333333"
+        android:textColorHint="#A9A9A9"
+        android:textSize="14sp"
+        android:inputType="time"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Start Time for Activity" />
+
+    <!-- End Time Input (Optional) -->
+    <EditText
+        android:id="@+id/activityEndTimeInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="End Time (Optional)"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:textColor="#333333"
+        android:textColorHint="#A9A9A9"
+        android:textSize="14sp"
+        android:inputType="time"
+        android:importantForAccessibility="yes"
+        android:contentDescription="End Time for Activity" />
+
+    <!-- Activity Category Spinner (Mandatory) -->
+    <Spinner
+        android:id="@+id/activityCategorySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Select Activity Category" />
+
+    <!-- Description Input (Optional) -->
+    <EditText
+        android:id="@+id/activityDescriptionInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Description (Optional)"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:textColor="#333333"
+        android:textColorHint="#A9A9A9"
+        android:textSize="14sp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Activity Description" />
+
+    <!-- Location Input (Optional) -->
+    <EditText
+        android:id="@+id/activityLocationInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Location (Optional)"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:textColor="#333333"
+        android:textColorHint="#A9A9A9"
+        android:textSize="14sp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Activity Location" />
+
+    <!-- Expense Input (Optional) -->
+    <EditText
+        android:id="@+id/activityExpenseInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Expense (Optional)"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:textColor="#333333"
+        android:textColorHint="#A9A9A9"
+        android:textSize="14sp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Activity Expense" />
+
+    <!-- Members Input (Already Added Members for Trip) -->
+    <LinearLayout
+        android:id="@+id/membersContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+        <!-- Members will be dynamically added here -->
+    </LinearLayout>
+
+    <!-- File Picker Button (Newly Added) -->
+    <Button
+        android:id="@+id/filePickerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Add a document"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#006D77"
+        android:padding="16dp"
+        android:textSize="16sp" />
+
+    <!-- Bottom Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:paddingTop="16dp">
         <Button
-            android:id="@+id/cancel"
+            android:id="@+id/cancelButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Cancel"
+            android:textColor="#b54747"
+            android:backgroundTint="#FFFFFF"
+            android:padding="16dp"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/createActivityButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#003049"
+            android:padding="16dp"
+            android:text="Create Activity"
             android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:backgroundTint="#E29578"
-            android:layout_margin="16dp"
-            android:height="50dp"
-            app:cornerRadius="8dp" />
+            android:textSize="16sp"/>
     </LinearLayout>
 
 </LinearLayout>

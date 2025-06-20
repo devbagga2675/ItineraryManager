@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#F0F5F9"
     android:padding="16dp"
-    android:fitsSystemWindows="true"
-    >
+    android:fitsSystemWindows="true">
 
     <TextView
         android:layout_width="wrap_content"
@@ -18,108 +16,14 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_margin="10dp"
-        android:layout_marginBottom="0dp"
-        />
+        android:layout_marginBottom="0dp"/>
+
     <LinearLayout
+        android:id="@+id/members_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="10dp"
-        android:layout_gravity="center"
-        >
+        android:layout_gravity="center"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/list_item_background"
-            android:padding="8dp"
-            android:layout_marginBottom="8dp">
-
-            <TextView
-                android:id="@+id/member_1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingHorizontal="10dp"
-                android:text="Ishita Amin"
-                android:textColor="#D08058"
-                android:textSize="18sp"
-                android:layout_gravity="center_vertical"/>
-
-            <Button
-                android:id="@+id/call_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Call"
-                android:textColor="#717171"
-                android:textSize="16sp"
-                android:backgroundTint="@android:color/transparent"
-                android:layout_gravity="center_vertical" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/list_item_background"
-            android:padding="8dp"
-            android:layout_marginBottom="8dp">
-
-            <TextView
-                android:id="@+id/member_2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingHorizontal="10dp"
-                android:text="Dev Bagga"
-                android:textColor="#D08058"
-                android:textSize="18sp"
-                android:layout_gravity="center_vertical"/>
-
-            <Button
-                android:id="@+id/call_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Call"
-                android:textColor="#717171"
-                android:textSize="16sp"
-                android:backgroundTint="@android:color/transparent"
-                android:layout_gravity="center_vertical" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/list_item_background"
-            android:padding="8dp"
-            android:layout_marginBottom="8dp">
-
-            <TextView
-                android:id="@+id/member_3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingHorizontal="10dp"
-                android:text="Dhyey Bhandari"
-                android:textColor="#D08058"
-                android:textSize="18sp"
-                android:layout_gravity="center_vertical"/>
-
-            <Button
-                android:id="@+id/call_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Call"
-                android:textColor="#717171"
-                android:textSize="16sp"
-                android:backgroundTint="@android:color/transparent"
-                android:layout_gravity="center_vertical" />
-
-        </LinearLayout>
-
-
-</LinearLayout>
 </LinearLayout>

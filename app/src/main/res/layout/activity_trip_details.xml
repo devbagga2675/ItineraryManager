@@ -1,122 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:orientation="vertical"
-    android:background="#F0F5F9"
     android:padding="16dp">
 
-    <!-- Trip Header -->
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/card_background"
-        android:elevation="4dp"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp">
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/back_button_bg"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:tint="#848484"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/trip_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TRIP NAME"
+            android:gravity="center"
+            android:text="Trip Details"
+            android:textColor="#106396"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="#D08058" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/menu_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/back_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="DuplicateIds" />
 
-        <TextView
-            android:id="@+id/trip_dates"
+        <ImageButton
+            android:id="@+id/menu_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/baseline_more_vert_24"
+            android:tint="#848484"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Trip Header -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="26/07/2025 to 30/07/2025"
-            android:textColor="#7C7C7C"
-            android:textSize="14sp" />
+            android:elevation="4dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/trip_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Daman, India"
-            android:textColor="#7C7C7C"
-            android:textSize="14sp" />
+            <TextView
+                android:id="@+id/trip_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Daman, India"
+                android:textColor="#7C7C7C"
+                android:textSize="14sp" />
 
-        <!-- Trip Status -->
-        <TextView
-            android:id="@+id/trip_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Status: Planned"
-            android:textColor="#7C7C7C"
-            android:textSize="14sp"
-            android:layout_marginVertical="5dp" />
+            <TextView
+                android:id="@+id/trip_dates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="26/07/2025 to 30/07/2025"
+                android:textColor="#7C7C7C"
+                android:textSize="14sp" />
 
-        <TextView
+
+            <!-- Trip Status -->
+            <!--        <TextView-->
+            <!--            android:id="@+id/trip_status"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:text="Status: Planned"-->
+            <!--            android:textColor="#7C7C7C"-->
+            <!--            android:textSize="14sp"-->
+            <!--            android:layout_marginVertical="5dp" />-->
+
+            <!-- Buttons -->
+
+        </LinearLayout>
+
+        <ImageButton
             android:id="@+id/trip_members"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Members >"
-            android:textColor="#7C7C7C"
-            android:layout_marginVertical="5dp"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/trip_documents"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Documents >"
-            android:layout_marginVertical="5dp"
-            android:textColor="#7C7C7C"
-            android:textSize="14sp" />
-
-        <!-- Buttons -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="16dp">
-
-            <Button
-                android:id="@+id/edit_details"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Edit Details"
-                android:backgroundTint="#106396"
-                android:textColor="#FFFFFF" />
-
-            <Button
-                android:id="@+id/delete_trip"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Delete Trip"
-                android:backgroundTint="#D08058"
-                android:textColor="#FFFFFF"
-                android:layout_marginStart="8dp" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <!-- Days List -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:scrollbars="none"
-        android:fadingEdge="none"
-        android:clipToPadding="false"
-        android:paddingBottom="8dp"
-        android:clipChildren="false">
-
+            android:padding="0dp"
+            android:src="@drawable/membersicon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.897"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.444" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
-        android:id="@+id/days_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="16dp"
-        android:paddingBottom="16dp">
-        <!-- Dynamic day views will be added here programmatically -->
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/trip_itinerary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Itinerary"
+            android:textColor="#106396"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:background="@drawable/back_button_bg"
+            android:padding="5dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/trip_expenses"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Expenses"
+            android:textColor="#106396"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:background="@drawable/back_button_bg"
+            android:padding="5dp"
+            android:layout_weight="1" />
     </LinearLayout>
-</ScrollView>
-    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <!-- Days List -->
+
+
+</LinearLayout>

@@ -3,10 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="button_blue">#006d77</color>
+    <color name="bottomNavUnselected">#177a83</color>
 
-        <color name="teal_700">#00796B</color>
-        <color name="green">#4CAF50</color>
-        <color name="red">#F44336</color>
+
+    <color name="teal_700">#00796B</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
 
 
 </resources>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpensesFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/graphexpenses"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028" />
+
+    <!-- Accommodation Category with Neutral Circle Color -->
+    <LinearLayout
+        android:id="@+id/layout_accommodation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/accommodationCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/baseline_circle_24"
+            android:tint="#B0BEC5"/> <!-- Neutral Grayish Blue -->
+        <TextView
+            android:id="@+id/accommodationCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Accommodation"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/accommodationExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/> <!-- Normal text color -->
+    </LinearLayout>
+
+    <!-- Transportation Category with Neutral Circle Color -->
+    <LinearLayout
+        android:id="@+id/layout_transportation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layout_accommodation"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/transportationCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/baseline_circle_24"
+            android:tint="#90A4AE"/> <!-- Muted Slate Blue -->
+        <TextView
+            android:id="@+id/transportationCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Transportation"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/transportationExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/> <!-- Normal text color -->
+    </LinearLayout>
+
+    <!-- Food and Drinks Category with Neutral Circle Color -->
+    <LinearLayout
+        android:id="@+id/layout_food_drinks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layout_transportation"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/foodDrinksCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/baseline_circle_24"
+            android:tint="#A5D6A7"/> <!-- Soft Green -->
+        <TextView
+            android:id="@+id/foodDrinksCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Food and Drinks"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/foodDrinksExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/> <!-- Normal text color -->
+    </LinearLayout>
+
+    <!-- Shopping Category with Neutral Circle Color -->
+    <LinearLayout
+        android:id="@+id/layout_shopping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layout_food_drinks"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/shoppingCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/baseline_circle_24"
+            android:tint="#D6D6D6"/> <!-- Light Gray -->
+        <TextView
+            android:id="@+id/shoppingCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Shopping"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/shoppingExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/> <!-- Normal text color -->
+    </LinearLayout>
+
+    <!-- Outings Category with Neutral Circle Color -->
+    <LinearLayout
+        android:id="@+id/layout_outings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layout_shopping"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/outingsCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/baseline_circle_24"
+            android:tint="#B0BEC5"/> <!-- Neutral Gray -->
+        <TextView
+            android:id="@+id/outingsCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Outings"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/outingsExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/> <!-- Normal text color -->
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

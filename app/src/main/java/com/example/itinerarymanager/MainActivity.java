@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.itinerarymanager.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,10 +26,21 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         FirebaseFirestore db = FirebaseFirestore.getInstance();
+        FirebaseAuth auth = FirebaseAuth.getInstance();
 
+        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
+            // Redirect to login screen if no user is signed in
+            startActivity(new Intent(this, LoginActivity2.class));
+            finish();
+        }
+        else {
+            // Redirect to home screen if user is already signed in
+            startActivity(new Intent(this, LandingPage.class));
+            finish();
+        }
         // Start LoginActivity2
-        Intent intent = new Intent(MainActivity.this, LoginActivity2.class);
-        startActivity(intent);
-        finish();
+//        Intent intent = new Intent(MainActivity.this, LoginActivity2.class);
+//        startActivity(intent);
+//        finish();
     }
 }

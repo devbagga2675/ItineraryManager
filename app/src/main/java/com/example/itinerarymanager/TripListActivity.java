@@ -109,35 +109,35 @@ public class TripListActivity extends AppCompatActivity {
 
 
         TextView tripNameTextView = tripCardView.findViewById(R.id.tripNameTextView);
-        TextView tripDateTextView = tripCardView.findViewById(R.id.tripDateTextView);
-        TextView tripLocationTextView = tripCardView.findViewById(R.id.tripLocationTextView);
+//        TextView tripDateTextView = tripCardView.findViewById(R.id.tripDateTextView);
+//        TextView tripLocationTextView = tripCardView.findViewById(R.id.tripLocationTextView);
         TextView tripStatusTextView = tripCardView.findViewById(R.id.tripStatusTextView);
-        Button viewTripButton = tripCardView.findViewById(R.id.viewTripButton);
+//        Button viewTripButton = tripCardView.findViewById(R.id.viewTripButton);
 
 
         tripNameTextView.setText(tripName);
-        tripDateTextView.setText("From: " + startDate + " To: " + endDate);
-        tripLocationTextView.setText(location);
+//        tripDateTextView.setText("From: " + startDate + " To: " + endDate);
+//        tripLocationTextView.setText(location);
 
 
         tripStatusTextView.setText(status);
         if (status.equals("Planned")) {
-            tripStatusTextView.setBackgroundResource(R.drawable.status_background_planned);
+            tripStatusTextView.setTextColor(Integer.parseInt("#76A154"));
         } else if (status.equals("Completed")) {
-            tripStatusTextView.setBackgroundResource(R.drawable.status_background_completed);
+            tripStatusTextView.setTextColor(Integer.parseInt("#4D80FF"));
         }
 
 
-        viewTripButton.setOnClickListener(v -> {
-
-            Intent intent = new Intent(TripListActivity.this, TripDetailsActivity.class);
-            intent.putExtra("tripName", tripName);
-            intent.putExtra("startDate", startDate);
-            intent.putExtra("endDate", endDate);
-            intent.putExtra("location", location);
-            intent.putExtra("status", status);
-            startActivity(intent);
-        });
+//        viewTripButton.setOnClickListener(v -> {
+//
+//            Intent intent = new Intent(TripListActivity.this, TripDetailsActivity.class);
+//            intent.putExtra("tripName", tripName);
+//            intent.putExtra("startDate", startDate);
+//            intent.putExtra("endDate", endDate);
+//            intent.putExtra("location", location);
+//            intent.putExtra("status", status);
+//            startActivity(intent);
+//        });
 
 
         tripsContainer.addView(tripCardView);

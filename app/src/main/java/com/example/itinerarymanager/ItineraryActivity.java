@@ -27,7 +27,7 @@ ItineraryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Intent to navigate to AddActivity
-                Intent intent = new Intent(ItineraryActivity.this, add_activity.class);
+                Intent intent = new Intent(ItineraryActivity.this, Add_Activity.class);
                 startActivity(intent);
             }
         });
